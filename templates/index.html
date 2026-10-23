@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finder AI Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="brand">Finder AI Agent</div>
+        <h1>Find products across Amazon, Flipkart, and Meesho</h1>
+        <p>
+          Search for products, compare prices, and discover the best marketplace fit for your requirements.
+        </p>
+
+        <form id="search-form" class="search-form">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search for earbuds, shoes, backpack..."
+            aria-label="Search for products"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <main>
+        <section class="summary-card">
+          <div id="summary-text">Loading product recommendations...</div>
+        </section>
+
+        <section id="results" class="results-grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
